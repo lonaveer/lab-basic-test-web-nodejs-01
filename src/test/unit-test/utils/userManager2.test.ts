@@ -2,16 +2,24 @@ import { createUser, findUserById, deleteUser } from '../../../app/utils/userMan
 
 describe('User Management Tests', () => {
   // ใช้ beforeEach สำหรับการเพิ่มข้อมูลผู้ใช้งานทดสอบลงในฐานข้อมูลจำลองก่อนแต่ละการทดสอบ
-  // ..... กรุณาเขียนโค้ดคำตอบลงในนี้ ..... //
+  beforeEach(() => {
+    createUser({ id: "1", name: "John Doe", email: "john@example.com" });
+  });
 
   // ใช้ afterEach สำหรับการลบข้อมูลผู้ใช้งานออกจากฐานข้อมูลจำลองหลังจากแต่ละการทดสอบ เพื่อไม่ให้ข้อมูลการทดสอบซ้ำซ้อน
-  // ..... กรุณาเขียนโค้ดคำตอบลงในนี้ ..... //
+  afterEach(() => {
+    deleteUser("1");
+  });
 
   it('should find a user by id', () => {
-    // ..... กรุณาเขียนโค้ดคำตอบลงในนี้ ..... //
+    const user = findUserById("1");
+    expect(user).toBeDefined();
+    expect(user?.name).toEqual("John Doe");
   });
 
   it('should delete a user by id', () => {
-    // ..... กรุณาเขียนโค้ดคำตอบลงในนี้ ..... //
+    deleteUser("1");
+    const user = findUserById("1");
+    expect(user).toBeUndefined();
   });
 });
