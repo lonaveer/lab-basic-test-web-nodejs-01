@@ -1,4 +1,4 @@
-import { divide } from '../../app/utils/mathUtils';
+import { divide } from '../../../app/utils/mathUtils';
 
 // ทดสอบฟังก์ชัน divide
 describe('divide function tests', () => {

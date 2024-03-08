@@ -1,4 +1,4 @@
-import { findUserById, checkUserEmail, findNameInArray } from '../../app/utils/userManager';
+import { findUserById, checkUserEmail, findNameInArray } from '../../../app/utils/userManager';
 
 describe('User Manager Tests', () => {
   it('should return a user object when found by ID', () => {
