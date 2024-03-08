@@ -3,18 +3,22 @@ import { divide } from '../../app/utils/mathUtils';
 // ทดสอบฟังก์ชัน divide
 describe('divide function tests', () => {
   it('should return the correct result when dividing two positive numbers', () => {
-    // ..... กรุณาเขียนโค้ดคำตอบลงในนี้ ..... //
+    const result = divide(10, 2);
+    expect(result).toBe(5); // ตรวจสอบว่าผลลัพธ์คือ 5
   });
 
   it('should return a positive result when dividing a negative number by a negative number', () => {
-    // ..... กรุณาเขียนโค้ดคำตอบลงในนี้ ..... //
+    const result = divide(-10, -2);
+    expect(result).toBeGreaterThan(0); // ตรวจสอบว่าผลลัพธ์มากกว่า 0
   });
 
   it('should return a result less than 1 when dividing a number by a larger number', () => {
-    // ..... กรุณาเขียนโค้ดคำตอบลงในนี้ ..... //
+    const result = divide(1, 2);
+    expect(result).toBeLessThan(1); // ตรวจสอบว่าผลลัพธ์น้อยกว่า 1
   });
 
   it('should throw an error when trying to divide by zero', () => {
-    // ..... กรุณาเขียนโค้ดคำตอบลงในนี้ ..... //
+    // ตรวจสอบว่าการหารด้วย 0 จะ throw error
+    expect(() => divide(10, 0)).toThrow("Cannot divide by zero");
   });
 });
