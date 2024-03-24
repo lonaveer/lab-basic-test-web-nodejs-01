@@ -12,14 +12,14 @@ describe('User Management Tests', () => {
   });
 
   it('should find a user by id', () => {
-    const user = findUserById("1");
-    expect(user).toBeDefined();
-    expect(user?.name).toEqual("John Doe");
+    const user = findUserById("1"); // ค้นหาผู้ใช้งานโดยใช้ ID
+    expect(user).toBeDefined(); // ตรวจสอบว่าผลลัพธ์ไม่เป็น undefined
+    expect(user?.name).toBe("John Doe"); // ตรวจสอบว่าผลลัพธ์ตรงกับชื่อ "John Doe"
   });
 
   it('should delete a user by id', () => {
-    deleteUser("1");
-    const user = findUserById("1");
-    expect(user).toBeUndefined();
+    deleteUser("1"); // ลบผู้ใช้งานโดยใช้ ID
+    const user = findUserById("1"); // ค้นหาผู้ใช้งานโดยใช้ ID
+    expect(user).toBeUndefined(); // ตรวจสอบว่าผลลัพธ์เป็น undefined
   });
 });
