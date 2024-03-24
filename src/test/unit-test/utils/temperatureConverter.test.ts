@@ -7,10 +7,13 @@ import { convertTemperature } from '../../../app/utils/temperatureConverter';
 // 4. แปลงอุณหภูมิจาก 212 ฟาเรนไฮต์เป็น 100 เซลเซียส
 
 // describe.each([
-//     // ..... กรุณาเขียนโค้ดคำตอบลงในนี้ ..... //
+//   [xxxxx, 'C', 32], // เซลเซียสเป็นฟาเรนไฮต์
+//   [xxxxx, xxxxx, xxxxx], // ฟาเรนไฮต์เป็นเซลเซียส
+//   [xxxxx, xxxxx, xxxxx], // เซลเซียสเป็นฟาเรนไฮต์
+//   [xxxxx, xxxxx, xxxxx] // ฟาเรนไฮต์เป็นเซลเซียส
 // ])('convertTemperature(%i, %s)', (inputTemp, unit, expected) => {
-//   it(`// ..... กรุณาเขียนโค้ดคำตอบลงในนี้ ..... //`, () => {
-//     // ..... กรุณาเขียนโค้ดคำตอบลงในนี้ ..... //
+//   it(`returns ${xxxxx} when converting ${inputTemp}${unit}`, () => {
+//     expect(xxxxx(xxxxx, xxxxx as 'C' | 'F')).xxxxx(xxxxx);
 
 //     // หมายเหตุ : โปรดใช้ .toBeCloseTo() ในการทดสอบค่าทศนิยม ว่าตรงกันหรือไม่
 //     //เนื่องจาก .toBe() นั้น Not Support การทดสอบค่าทศนิยม
