@@ -20,5 +20,9 @@ describe('divide function tests', () => {
   it('should throw an error when trying to divide by zero', () => {
     // ตรวจสอบว่าการหารด้วย 0 จะ throw error
     expect(() => divide(10, 0)).toThrow("Cannot divide by zero");
+
+    // หมายเหตุ : การทดสอบ Error มักจะทำในรูปแบบนี้ "expect(() => divide(10, 0))"
+    // เนื่องจาก Error จะแสดงก่อนที่ฟังก์ชั่นจะทำงานจบ จึงควรเอาฟังก์ชั่นใส่ลงไปใน expect เพื่อให้ toThrow() สามารถดักจับ Error ได้
+    // ซึ่งไม่ควรเอาตัวแปรมารับค่าของฟังก์ชั่นก่อน เช่น const result = divide(10, 0); แล้วค่อยใช้ expect(result) ซึ่งจะผิดทันที
   });
 });
